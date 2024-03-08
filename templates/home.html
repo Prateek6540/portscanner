@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Port Scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="cybersecurity-background">
+    <div class="welcome-container">
+        <h1>Welcome, New Cyber Guy!</h1>
+        <p>Feeling fed up with Nmap command prompts? Say goodbye to complexity and welcome to our easy interface page.</p>
+        <p>Before you proceed, please read and agree to the terms and conditions below.</p>
+        <form action="/agree" method="post">
+            <label>
+                <input type="checkbox" name="agree" required>
+                I agree to use this webpage for ethical purposes, and I have the necessary permissions to scan the specified domain.
+            </label>
+            <br>
+            <button type="submit">Proceed to Port Scanner</button>
+        </form>
+    </div>
+</body>
+</html>

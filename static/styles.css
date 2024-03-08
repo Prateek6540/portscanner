@@ -1,0 +1,144 @@
+/* Common Styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0f0f0f;
+    color: #00ff00;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #00ff00;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: #00ff00;
+}
+
+button {
+    padding: 10px;
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00cc00;
+}
+
+/* Home Page Styles */
+.cybersecurity-background {
+    background-image: url("cybersecurity-background.jpg"); /* Add your image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.welcome-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.welcome-container h1 {
+    text-align: center;
+}
+
+.welcome-container p {
+    margin-bottom: 20px;
+}
+
+.welcome-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-container label {
+    margin-top: 10px;
+}
+
+.welcome-container input {
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: #00ff00;
+}
+
+.welcome-container button {
+    padding: 10px;
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.welcome-container button:hover {
+    background-color: #00cc00;
+}
+
+/* Result Page Styles */
+.result-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.result-container h2 {
+    text-align: center;
+    color: #00ff00;
+}
+
+.result-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.result-container th, .result-container td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: left;
+    color: #00ff00;
+}
+
+.result-container th {
+    background-color: #00ff00;
+    color: #000;
+}
+
+.result-container tr:nth-child(even) {
+    background-color: #333;
+}

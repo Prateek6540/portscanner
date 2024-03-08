@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port Scan Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Port Scan Result</h1>
+    <p>Target IP: {{ target_ip }}</p>
+
+    {% if open_ports %}
+    <h2>Open Ports</h2>
+    <p>Open ports: {{ open_ports | join(', ') }}</p>
+    {% endif %}
+
+    {% if closed_ports %}
+    <h2>Closed Ports</h2>
+    <p>Closed ports: {{ closed_ports | join(', ') }}</p>
+    {% endif %}
+
+    {% if error %}
+    <h2>Error</h2>
+    <p>{{ error }}</p>
+    {% endif %}
+
+    <p>Total time: {{ total_time }}</p>
+</body>
+</html>

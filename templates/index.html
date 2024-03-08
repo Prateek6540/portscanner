@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Network Scanner</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Network Scanner</h1>
+        <form action="{{ url_for('scan') }}" method="post">
+            <label for="target_type">Select Target Type:</label>
+            <select name="target_type" id="target_type" required>
+                <option value="url">URL</option>
+                <option value="ip">IP Address</option>
+            </select>
+
+            <label for="target">Enter Target:</label>
+            <input type="text" name="target" id="target" required>
+
+            <label for="scan_type">Select Scan Type:</label>
+            <select name="scan_type" id="scan_type" required>
+                <option value="1">Quick Scan (Top 1000 ports)</option>
+                <option value="2">Detailed Scan (All 65535 ports)</option>
+                <option value="3">Specific Port Scan</option>
+                <option value="4">Port Range Scan</option>
+            </select>
+
+            <div id="specific_port_div" style="display: none;">
+                <label for="specific_port">Specific Port:</label>
+                <input type="number" name="specific_port" id="specific_port">
+            </div>
+
+            <div id="port_range_div" style="display: none;">
+                <label for="start_port">Start Port:</label>
+                <input type="number" name="start_port" id="start_port">
+                <label for="end_port">End Port:</label>
+                <input type="number" name="end_port" id="end_port">
+            </div>
+
+            <button type="submit">Scan</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
